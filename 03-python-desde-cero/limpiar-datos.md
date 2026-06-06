@@ -22,7 +22,7 @@ Puedes ejecutar:
 python scripts/03_limpiar_datos.py
 ```
 
-En macOS o Linux:
+En macOS:
 
 ```bash
 python3 scripts/03_limpiar_datos.py

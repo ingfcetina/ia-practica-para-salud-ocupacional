@@ -37,7 +37,7 @@ scripts/
 pip install -r requirements.txt
 ```
 
-En macOS o Linux puede ser:
+En macOS puede ser:
 
 ```bash
 python3 -m pip install -r requirements.txt
@@ -53,7 +53,7 @@ Ejecuta:
 python scripts/00_validar_datos.py
 ```
 
-Si usas macOS o Linux:
+Si usas macOS:
 
 ```bash
 python3 scripts/00_validar_datos.py

@@ -55,7 +55,7 @@ Si `python` no funciona:
 py -m pip install -r requirements-notebooks.txt
 ```
 
-### macOS / Linux
+### macOS
 
 ```bash
 python3 -m pip install -r requirements-notebooks.txt
@@ -69,7 +69,7 @@ python3 -m pip install -r requirements-notebooks.txt
 python -m jupyter lab
 ```
 
-### macOS / Linux
+### macOS
 
 ```bash
 python3 -m jupyter lab

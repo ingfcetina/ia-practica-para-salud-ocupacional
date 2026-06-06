@@ -148,11 +148,9 @@ Se abrirá una ventana negra en esa carpeta.
 3. Arrastra la carpeta del repositorio a la Terminal.
 4. Presiona **Enter**.
 
-#### Linux
+#### Si usas otro sistema
 
-1. Abre la carpeta del repositorio.
-2. Haz clic derecho.
-3. Elige **Abrir en Terminal**, si tu entorno lo permite.
+Esta guía se enfoca en Windows y macOS. Si usas otro sistema, consulta la documentación oficial de Python y Jupyter o pide apoyo al docente.
 
 ### Paso 2: instalar Jupyter
 
@@ -170,7 +168,7 @@ Si no funciona, prueba:
 py -m pip install -r requirements-notebooks.txt
 ```
 
-#### macOS / Linux
+#### macOS
 
 Copia y pega:
 
@@ -192,7 +190,7 @@ Si usas `py`:
 py -m jupyter lab
 ```
 
-#### macOS / Linux
+#### macOS
 
 ```bash
 python3 -m jupyter lab
@@ -248,7 +246,7 @@ No sirve para:
 ```text
 Estoy intentando abrir un notebook Jupyter de este repositorio.
 No tengo experiencia con programación.
-Uso [Windows/macOS/Linux].
+Uso [Windows/macOS].
 Estoy usando [VS Code/JupyterLab/GitHub].
 Esto es lo que veo: [pega error o describe pantalla].
 Dame pasos muy concretos para resolverlo.

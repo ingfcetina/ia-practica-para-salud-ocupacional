@@ -188,31 +188,9 @@ python3 --version
 
 Si ves una versión de Python, está listo.
 
-## Instalar Python en Linux, paso a paso
+## Nota sobre otros sistemas
 
-En muchas distribuciones Python ya está instalado.
-
-1. Abre Terminal.
-2. Verifica:
-
-```bash
-python3 --version
-```
-
-Si no está instalado y usas Ubuntu/Debian, puedes instalarlo con:
-
-```bash
-sudo apt update
-sudo apt install python3 python3-pip
-```
-
-Si usas otra distribución, pide ayuda con este prompt:
-
-```text
-Uso Linux [nombre de distribución].
-Necesito instalar Python 3 y pip para ejecutar ejemplos educativos.
-Dame pasos seguros y simples para mi distribución.
-```
+Esta guía se enfoca en **Windows y macOS**, porque son los sistemas más probables para el grupo. Si usas otro sistema operativo, pide apoyo específico al docente o usa la documentación oficial de Python: <https://www.python.org/downloads/>.
 
 ## Instalar las librerías del proyecto
 
@@ -232,7 +210,7 @@ Si `python` no funcionó pero `py` sí:
 py -m pip install -r requirements.txt
 ```
 
-### macOS / Linux
+### macOS
 
 ```bash
 python3 -m pip install -r requirements.txt
@@ -259,7 +237,7 @@ O, si usas `py`:
 py scripts/00_validar_datos.py
 ```
 
-### macOS / Linux
+### macOS
 
 ```bash
 python3 scripts/00_validar_datos.py
@@ -297,7 +275,7 @@ py scripts/03_limpiar_datos.py
 py scripts/04_generar_informe_base.py
 ```
 
-### macOS / Linux
+### macOS
 
 ```bash
 python3 scripts/01_analizar_ausentismo.py
@@ -358,7 +336,7 @@ Instala soporte para notebooks:
 python -m pip install -r requirements-notebooks.txt
 ```
 
-### macOS / Linux
+### macOS
 
 ```bash
 python3 -m pip install -r requirements-notebooks.txt
@@ -372,7 +350,7 @@ Luego abre JupyterLab:
 python -m jupyter lab
 ```
 
-### macOS / Linux
+### macOS
 
 ```bash
 python3 -m jupyter lab
@@ -414,7 +392,7 @@ git pull
 |---|---|
 | No sé si estoy en la carpeta correcta | Debes ver `README.md`, `assets` y `scripts`. |
 | `python` no funciona en Windows | Prueba `py --version`. |
-| `python3` no funciona en macOS | Reinstala Python desde `python.org`. |
+| `python3` no funciona en macOS | Reinstala Python desde `python.org` y vuelve a abrir Terminal. |
 | Sale `No module named pandas` | Ejecuta el comando de instalación de librerías otra vez. |
 | No encuentro el notebook | Está en `assets/notebooks/`. |
 | VS Code pide Kernel | Elige Python. Si no aparece, instala Python y reinicia VS Code. |
@@ -426,7 +404,7 @@ git pull
 ```text
 Estoy siguiendo una guía para instalar Python y abrir notebooks.
 No tengo experiencia con consola.
-Estoy en [Windows/macOS/Linux].
+Estoy en [Windows/macOS].
 Este es el paso donde estoy: [describe el paso].
 Este es el error o pantalla que veo: [pega el texto].
 Explícame qué hacer con instrucciones paso a paso, sin asumir que sé usar terminal.

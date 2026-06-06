@@ -19,7 +19,7 @@ Ejecuta:
 python scripts/02_graficar_incidentes.py
 ```
 
-En macOS o Linux:
+En macOS:
 
 ```bash
 python3 scripts/02_graficar_incidentes.py
