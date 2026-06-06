@@ -20,6 +20,8 @@ Usa estos enlaces para descargar herramientas y consultar documentación confiab
 | Extensión Python para VS Code | <https://marketplace.visualstudio.com/items?itemName=ms-python.python> | Ejecutar Python en VS Code. |
 | Extensión Jupyter para VS Code | <https://marketplace.visualstudio.com/items?itemName=ms-toolsai.jupyter> | Abrir notebooks `.ipynb` en VS Code. |
 | Jupyter | <https://jupyter.org/install> | Ejecutar notebooks en navegador. |
+| Mermaid | <https://mermaid.js.org/intro/> | Crear diagramas desde texto en Markdown. |
+| Markdown Guide | <https://www.markdownguide.org/basic-syntax/> | Aprender sintaxis básica de Markdown. |
 
 ## Librerías usadas
 
@@ -35,6 +37,8 @@ Usa estos enlaces para descargar herramientas y consultar documentación confiab
 | ChatGPT | <https://chatgpt.com/> | Explorar ideas, resumir y pedir explicaciones. |
 | Claude | <https://claude.ai/> | Revisar textos, guiones y documentos largos. |
 | OpenAI Codex | <https://openai.com/codex/> | Apoyo para escribir, revisar y explicar código. |
+| Codex CLI | <https://github.com/openai/codex> | Usar Codex desde un proyecto local. |
+| Claude Code | <https://docs.anthropic.com/en/docs/claude-code/overview> | Usar Claude desde un proyecto local. |
 
 ## Recomendación
 

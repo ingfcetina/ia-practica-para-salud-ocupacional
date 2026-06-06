@@ -58,6 +58,7 @@ No uses datos reales identificables de pacientes, trabajadores, empresas o insti
 - Ejemplo web interactivo: `assets/checklist_interactivo.html`.
 - Prompts para ChatGPT web, Claude, Claude Code y Codex.
 - Ideas de ampliación en [[06-recursos/ideas-proyectos|Ideas de ampliación y proyectos]].
+- Glosario con referencias y diagramas en [[06-recursos/glosario|Glosario]] y [[06-recursos/diagramas-mermaid|Diagramas Mermaid]].
 - Notas para estudiantes y materiales docentes separados.
 
 ## Licencia

@@ -10,6 +10,7 @@ tags: #moc #recursos
 - [[06-recursos/guia-python-jupyter|Guía de Python y Jupyter Notebooks]]
 - [[06-recursos/enlaces-oficiales|Enlaces oficiales]]
 - [[06-recursos/ideas-proyectos|Ideas de ampliación y proyectos]]
+- [[06-recursos/diagramas-mermaid|Diagramas Mermaid]]
 - [[06-recursos/glosario|Glosario]]
 - [[06-recursos/lecturas-recomendadas|Lecturas recomendadas]]
 
