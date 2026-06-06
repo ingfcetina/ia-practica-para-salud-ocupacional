@@ -7,6 +7,7 @@ tags: #moc #python
 - [[03-python-desde-cero/graficar-resultados|Graficar resultados]]
 - [[03-python-desde-cero/generar-informes|Generar informes]]
 - [[scripts/README|Scripts de ejemplo]]
+- [[assets/notebooks/README|Notebooks de ejemplo]]
 
 ## Relacionado
 

@@ -14,7 +14,8 @@ Sigue esta ruta si estás usando el vault como estudiante o profesional que quie
 6. [[04-herramientas-ia/chatgpt-web|ChatGPT web]]
 7. [[02-practicas-guiadas/practica-01-analizar-ausentismo|Práctica 1: analizar ausentismo]]
 8. [[03-python-desde-cero/leer-datos-csv|Leer datos CSV]]
-9. [[05-mini-proyectos/checklist-inteligente|Checklist inteligente]]
+9. [[assets/notebooks/README|Notebooks de ejemplo]]
+10. [[05-mini-proyectos/checklist-inteligente|Checklist inteligente]]
 
 ## Ruta completa
 
@@ -25,8 +26,9 @@ Sigue esta ruta si estás usando el vault como estudiante o profesional que quie
 | 3 | Conocer los datasets | Revisa qué contiene cada CSV antes de analizar. |
 | 4 | Practicar con IA en la web | Usa prompts seguros con datos sintéticos. |
 | 5 | Leer datos con Python | Observa el código aunque todavía no domines la sintaxis. |
-| 6 | Crear un prototipo | Prueba el checklist o una página interactiva. |
-| 7 | Revisar críticamente | Separa hechos, hipótesis y decisiones profesionales. |
+| 6 | Ejecutar notebooks | Usa celdas comentadas para aprender paso a paso. |
+| 7 | Crear un prototipo | Prueba el checklist o una página interactiva. |
+| 8 | Revisar críticamente | Separa hechos, hipótesis y decisiones profesionales. |
 
 ## Si algo falla
 
