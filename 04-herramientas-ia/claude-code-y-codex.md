@@ -166,7 +166,7 @@ No uses datos reales ni propongas datos identificables.
 
 ```text
 Revisa 00-empezar-aqui/instalacion-y-preparacion.md y assets/notebooks/README.md.
-Busca pasos confusos para estudiantes principiantes en Windows, macOS y Linux.
+Busca pasos confusos para estudiantes principiantes en Windows y macOS.
 Propón mejoras concretas sin cambiar archivos todavía.
 ```
 
@@ -184,7 +184,7 @@ python scripts/04_generar_informe_base.py
 Si algo falla, explica el error en lenguaje simple y propone una corrección mínima.
 ```
 
-En macOS o Linux puede que el asistente deba usar `python3`:
+En macOS puede que el asistente deba usar `python3`:
 
 ```text
 Si `python` no funciona, intenta con `python3`.

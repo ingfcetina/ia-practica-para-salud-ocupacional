@@ -42,7 +42,7 @@ No uses datos reales identificables de pacientes, trabajadores, empresas o insti
 - [[03-python-desde-cero/python-moc|03 Python desde cero]]
 - [[04-herramientas-ia/herramientas-moc|04 Herramientas IA]]
 - [[05-mini-proyectos/mini-proyectos-moc|05 Mini proyectos]]
-- [[06-recursos/recursos-moc|06 Recursos]]
+- [[06-recursos/recursos-moc|06 Anexos y referencias]]
 
 ## Material incluido
 

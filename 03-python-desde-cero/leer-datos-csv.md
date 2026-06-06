@@ -22,7 +22,7 @@ Al terminar esta nota podrás:
 
 ## Antes de empezar
 
-1. Abre una terminal en la carpeta raíz del repositorio.
+1. Abre una consola o Terminal en la carpeta raíz del repositorio siguiendo [[00-empezar-aqui/instalacion-y-preparacion|Instalación y preparación]].
 2. Verifica que ves estas carpetas:
 
 ```text
@@ -33,11 +33,19 @@ scripts/
 
 3. Instala dependencias si todavía no lo hiciste:
 
+En Windows:
+
 ```bash
-pip install -r requirements.txt
+python -m pip install -r requirements.txt
 ```
 
-En macOS puede ser:
+Si `python` no funciona, prueba:
+
+```bash
+py -m pip install -r requirements.txt
+```
+
+En macOS:
 
 ```bash
 python3 -m pip install -r requirements.txt
@@ -152,7 +160,7 @@ No cambies el resto del código si no es necesario.
 | Error | Qué significa | Cómo resolverlo |
 |---|---|---|
 | `FileNotFoundError` | Python no encuentra el archivo. | Revisa la ruta y que estés en la carpeta raíz del repo. |
-| `ModuleNotFoundError: pandas` | No está instalada la librería pandas. | Ejecuta `pip install -r requirements.txt`. |
+| `ModuleNotFoundError: pandas` | No está instalada la librería pandas. | Vuelve a la sección "Antes de empezar" e instala dependencias con el comando de Windows o macOS. |
 | Columnas raras o vacías | El archivo puede tener otro separador o codificación. | Revisa el CSV o pide ayuda a la IA con el mensaje de error. |
 
 ## Relacionado

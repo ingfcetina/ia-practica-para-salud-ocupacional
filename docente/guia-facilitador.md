@@ -22,10 +22,22 @@ Ten listo al menos un equipo de demostración con:
 - acceso a ChatGPT web, Claude o una herramienta equivalente;
 - editor de texto o entorno de código;
 - Python instalado;
-- dependencias instaladas:
+- dependencias instaladas desde la carpeta del repositorio:
 
 ```bash
-pip install pandas matplotlib
+python -m pip install -r requirements.txt
+```
+
+Si en Windows `python` no funciona, usa:
+
+```bash
+py -m pip install -r requirements.txt
+```
+
+En macOS usa:
+
+```bash
+python3 -m pip install -r requirements.txt
 ```
 
 Si Python falla durante la sesión, no detengas el taller: muestra el código, la salida esperada y vuelve al método.

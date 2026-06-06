@@ -51,7 +51,7 @@ Este glosario explica términos frecuentes del vault en lenguaje simple. No busc
 | Término | Explicación simple | Ejemplo en este vault | Referencia |
 |---|---|---|---|
 | Python | Lenguaje de programación usado para análisis, automatización y prototipos. | Scripts de análisis en `scripts/`. | [Python](https://www.python.org/), [Python docs](https://docs.python.org/3/) |
-| pip | Herramienta para instalar librerías de Python. | `pip install -r requirements.txt`. | [Installing Python packages](https://packaging.python.org/en/latest/tutorials/installing-packages/) |
+| pip | Herramienta para instalar librerías de Python. | `python -m pip install -r requirements.txt`. | [Installing Python packages](https://packaging.python.org/en/latest/tutorials/installing-packages/) |
 | pandas | Librería de Python para trabajar con tablas. | Leer `ausentismo_ejemplo.csv`. | [pandas docs](https://pandas.pydata.org/docs/) |
 | DataFrame | Tabla de datos dentro de pandas. | La variable `datos`. | [pandas DataFrame](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.html) |
 | Columna | Campo vertical de una tabla. | `area`, `mes`, `dias_ausencia`. | [[06-recursos/datasets-ejemplo|Datasets de ejemplo]] |

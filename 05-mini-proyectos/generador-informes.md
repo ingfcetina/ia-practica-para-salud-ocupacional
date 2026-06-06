@@ -27,7 +27,7 @@ Ejecuta:
 python scripts/04_generar_informe_base.py
 ```
 
-En macOS o Linux:
+En macOS:
 
 ```bash
 python3 scripts/04_generar_informe_base.py
