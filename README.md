@@ -52,6 +52,7 @@ No uses datos reales identificables de pacientes, trabajadores, empresas o insti
 - Datos sintéticos documentados en [[06-recursos/datasets-ejemplo|Datasets de ejemplo]]: ausentismo, incidentes, checklist de inspección e indicadores de dashboard.
 - Scripts validados en [[scripts/README|Scripts de ejemplo]].
 - Notebooks comentados en [[assets/notebooks/README|Notebooks de ejemplo]].
+- Explicación detallada de Python y Jupyter en [[06-recursos/guia-python-jupyter|Guía de Python y Jupyter Notebooks]].
 - Guía de instalación con enlaces oficiales en [[00-empezar-aqui/instalacion-y-preparacion|Instalación y preparación]].
 - Gráficos de ejemplo generados en `assets/imagenes/`.
 - Ejemplo web interactivo: `assets/checklist_interactivo.html`.

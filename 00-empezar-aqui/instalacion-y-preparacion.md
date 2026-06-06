@@ -167,7 +167,7 @@ jupyter lab
 
 Luego entra a la carpeta `assets/notebooks/` desde el navegador.
 
-Más detalles: [[assets/notebooks/README|Notebooks de ejemplo]].
+Más detalles: [[assets/notebooks/README|Notebooks de ejemplo]] y [[06-recursos/guia-python-jupyter|Guía de Python y Jupyter Notebooks]].
 
 ## Paso 7: validar los datos
 
