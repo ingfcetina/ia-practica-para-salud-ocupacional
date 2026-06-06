@@ -47,6 +47,7 @@ No uses datos reales identificables de pacientes, trabajadores, empresas o insti
 ## Material incluido
 
 - Datos sintéticos documentados en [[06-recursos/datasets-ejemplo|Datasets de ejemplo]]: ausentismo, incidentes, checklist de inspección e indicadores de dashboard.
+- Guía para explorar datos públicos en [[06-recursos/datos-abiertos-colombia|Datos abiertos de Colombia]].
 - Scripts validados en [[scripts/README|Scripts de ejemplo]].
 - Notebooks comentados en [[assets/notebooks/README|Notebooks de ejemplo]].
 - Explicación detallada de Python y Jupyter en [[06-recursos/guia-python-jupyter|Guía de Python y Jupyter Notebooks]].

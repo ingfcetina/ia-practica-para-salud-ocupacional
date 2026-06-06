@@ -7,6 +7,7 @@ Esta sección no es una segunda ruta de aprendizaje. Es el lugar para consultar 
 ## Datos y ejecución
 
 - [[06-recursos/datasets-ejemplo|Datasets de ejemplo]]
+- [[06-recursos/datos-abiertos-colombia|Datos abiertos de Colombia]]
 - [[scripts/README|Scripts de ejemplo]]
 - [[assets/notebooks/README|Notebooks de ejemplo]]
 

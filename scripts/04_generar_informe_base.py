@@ -3,8 +3,14 @@ from pathlib import Path
 import pandas as pd  # type: ignore[import-not-found]
 
 ROOT = Path(__file__).resolve().parents[1]
+
+# Archivos de entrada.
+# Para adaptar este informe, cambia estas rutas y luego revisa que las
+# columnas usadas abajo existan en tus archivos.
 AUSENTISMO = ROOT / "assets" / "datos" / "ausentismo_ejemplo.csv"
 INCIDENTES = ROOT / "assets" / "datos" / "incidentes_ejemplo.csv"
+
+# Archivo de salida del informe.
 SALIDA = ROOT / "outputs" / "informe_base.md"
 
 
@@ -12,6 +18,8 @@ def main() -> None:
     ausentismo = pd.read_csv(AUSENTISMO)
     incidentes = pd.read_csv(INCIDENTES)
 
+    # Indicadores agregados.
+    # Si cambias de dataset, reemplaza los nombres de columnas por los de tu archivo.
     total_dias = int(ausentismo["dias_ausencia"].sum())  # type: ignore[arg-type]
     area_mayor = ausentismo.groupby("area")["dias_ausencia"].sum().idxmax()  # type: ignore[attr-defined]
     total_incidentes = len(incidentes)

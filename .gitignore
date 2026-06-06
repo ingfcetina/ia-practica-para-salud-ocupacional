@@ -14,6 +14,10 @@ __pycache__/
 .venv/
 venv/
 
+# Optional external datasets downloaded by students
+assets/datos/externos/*
+!assets/datos/externos/.gitkeep
+
 # OS files
 .DS_Store
 Thumbs.db

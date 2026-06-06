@@ -6,12 +6,22 @@ matplotlib.use("Agg")
 import matplotlib.pyplot as plt  # type: ignore[import-not-found]
 
 ROOT = Path(__file__).resolve().parents[1]
+
+# Archivo de entrada.
+# Para usar otro CSV, cambia esta ruta y verifica que tenga una columna
+# de categoría como "tipo_incidente". Guarda datos propios en assets/datos/externos/.
 DATOS = ROOT / "assets" / "datos" / "incidentes_ejemplo.csv"
+
+# Archivo de salida del gráfico.
 SALIDA = ROOT / "assets" / "imagenes" / "incidentes_por_tipo.png"
 
 
 def main() -> None:
+    # Leemos la tabla de incidentes sintéticos.
     datos = pd.read_csv(DATOS)
+
+    # Contamos cuántas veces aparece cada tipo de incidente.
+    # Si tu archivo usa otro nombre de columna, cambia "tipo_incidente".
     conteo = datos["tipo_incidente"].value_counts()
     print("Incidentes por tipo:")
     print(conteo.to_string())
