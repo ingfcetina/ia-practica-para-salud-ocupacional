@@ -56,7 +56,8 @@ No uses datos reales identificables de pacientes, trabajadores, empresas o insti
 - Guía de instalación con enlaces oficiales en [[00-empezar-aqui/instalacion-y-preparacion|Instalación y preparación]].
 - Gráficos de ejemplo generados en `assets/imagenes/`.
 - Ejemplo web interactivo: `assets/checklist_interactivo.html`.
-- Prompts para ChatGPT web, Claude y Codex.
+- Prompts para ChatGPT web, Claude, Claude Code y Codex.
+- Ideas de ampliación en [[06-recursos/ideas-proyectos|Ideas de ampliación y proyectos]].
 - Notas para estudiantes y materiales docentes separados.
 
 ## Licencia

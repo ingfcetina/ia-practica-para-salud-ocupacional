@@ -31,6 +31,23 @@ Revisa este caso de ejemplo y dime si contiene datos que podrían identificar a 
 Sugiere cómo anonimizarlo antes de usar una herramienta de IA pública.
 ```
 
+## Usar Claude Code o Codex
+
+```text
+Lee README.md y 00-empezar-aqui/mapa-del-vault.md.
+Este es un vault educativo de Obsidian para estudiantes de salud ocupacional.
+Antes de cambiar archivos, resume la estructura del proyecto y dime qué notas son la ruta principal para estudiantes.
+No uses datos reales ni propongas datos identificables.
+```
+
+## Diseñar un proyecto nuevo
+
+```text
+Quiero crear un mini proyecto para este vault.
+Primero propón objetivo, audiencia, datos sintéticos necesarios, archivos que crearías, pasos para estudiantes, validaciones y riesgos de privacidad.
+No escribas código todavía. Espera mi aprobación del plan.
+```
+
 ## Relacionado
 
 - [[01-conceptos-clave/prompts-utiles|Prompts útiles]]
