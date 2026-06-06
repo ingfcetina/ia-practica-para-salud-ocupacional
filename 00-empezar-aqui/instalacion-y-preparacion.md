@@ -1,183 +1,265 @@
-# Instalación y preparación
+# Instalación y preparación, paso a paso
 
 tags: #instalacion #python #obsidian #git #notebooks #preparacion
 
-Esta guía te ayuda a preparar el computador para usar el vault, abrir las notas, ejecutar scripts de Python, abrir notebooks y probar la página interactiva.
+Esta guía está escrita para personas que **no han usado consola, PowerShell, Terminal ni programación**. La meta es que puedas abrir el vault, leer las notas, probar ejemplos y, si quieres, ejecutar Python.
 
-> Si estás en una clase de una hora, no te preocupes si no alcanzas a instalar todo. Puedes seguir el material desde GitHub u Obsidian y revisar los resultados ya generados.
+> Si estás en una clase corta, no intentes instalar todo en vivo. Puedes leer el vault en GitHub u Obsidian y volver a esta guía después.
 
-## Qué vas a instalar
+## Qué necesitas realmente
 
-| Herramienta | Para qué sirve | Enlace oficial |
+Hay tres niveles. Empieza por el primero.
+
+| Nivel | Qué puedes hacer | Qué necesitas instalar |
 |---|---|---|
-| Obsidian | Abrir este repositorio como vault y navegar con enlaces internos. | <https://obsidian.md/download> |
-| Python | Ejecutar ejemplos de análisis de datos. | <https://www.python.org/downloads/> |
-| Git | Clonar el repositorio y actualizarlo. | <https://git-scm.com/downloads> |
-| VS Code | Abrir scripts y notebooks con una interfaz visual. | <https://code.visualstudio.com/Download> |
-| Jupyter | Ejecutar notebooks `.ipynb`. | <https://jupyter.org/install> |
-| pandas y matplotlib | Leer tablas CSV y crear gráficos. | <https://pandas.pydata.org/docs/>, <https://matplotlib.org/stable/users/index.html> |
+| 1. Leer el material | Leer notas, datos y ejemplos. | Nada, solo navegador. |
+| 2. Abrir como vault | Navegar con enlaces internos y grafo de Obsidian. | Obsidian. |
+| 3. Ejecutar ejemplos | Correr Python, notebooks y generar gráficos. | Python, librerías y opcionalmente VS Code/Jupyter. |
 
-Más referencias en [[06-recursos/enlaces-oficiales|Enlaces oficiales]].
+## Nivel 1: usar el material sin instalar nada
 
-## Paso 1: descargar el repositorio
+1. Abre el repositorio en el navegador:
 
-### Opción rápida: descargar ZIP
+   <https://github.com/ingfcetina/ia-practica-para-salud-ocupacional>
 
-1. Abre el repositorio en GitHub: <https://github.com/ingfcetina/ia-practica-para-salud-ocupacional>.
-2. Presiona **Code**.
-3. Elige **Download ZIP**.
-4. Descomprime el archivo en una carpeta fácil de encontrar.
-
-Ejemplo:
+2. Haz clic en `README.md` si no se abre automáticamente.
+3. Lee la sección **Si eres estudiante**.
+4. Abre las carpetas como si fueran carpetas normales.
+5. Para ver datos, entra a:
 
 ```text
-Documentos/ia-practica-para-salud-ocupacional
+assets/datos/
 ```
 
-### Opción con Git: clonar
-
-Primero instala Git desde <https://git-scm.com/downloads>. Luego ejecuta:
-
-```bash
-git clone https://github.com/ingfcetina/ia-practica-para-salud-ocupacional.git
-cd ia-practica-para-salud-ocupacional
-```
-
-Para aprender más sobre clonar repositorios, consulta la documentación de GitHub: <https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository>.
-
-## Paso 2: instalar y abrir Obsidian
-
-1. Descarga Obsidian desde <https://obsidian.md/download>.
-2. Instálalo y ábrelo.
-3. Selecciona **Open folder as vault** o **Abrir carpeta como vault**.
-4. Elige la carpeta del repositorio.
-5. Abre [[00-empezar-aqui/mapa-del-vault|Mapa del vault]].
-
-Documentación oficial de Obsidian: <https://help.obsidian.md/>.
-
-## Paso 3: instalar Python
-
-### Windows
-
-1. Ve a <https://www.python.org/downloads/>.
-2. Descarga la versión estable más reciente de Python.
-3. Durante la instalación, marca **Add Python to PATH**.
-4. Finaliza la instalación.
-5. Abre PowerShell o Terminal.
-6. Verifica:
-
-```bash
-python --version
-```
-
-Si Windows abre Microsoft Store en lugar de mostrar la versión, instala Python desde `python.org` y revisa los alias de ejecución de aplicaciones en la configuración de Windows.
-
-### macOS
-
-1. Descarga Python desde <https://www.python.org/downloads/>.
-2. Instálalo.
-3. Abre Terminal.
-4. Verifica:
-
-```bash
-python3 --version
-```
-
-En macOS puede que debas usar `python3` en lugar de `python`.
-
-### Linux
-
-En muchas distribuciones Python ya viene instalado. Verifica:
-
-```bash
-python3 --version
-```
-
-Si no está instalado, usa el gestor de paquetes de tu distribución.
-
-## Paso 4: abrir terminal en la carpeta del vault
-
-La terminal debe estar ubicada donde están `README.md`, `assets/`, `scripts/` y `requirements.txt`.
-
-En Windows:
-
-1. Abre la carpeta en el Explorador.
-2. Haz clic derecho dentro de la carpeta.
-3. Elige **Abrir en Terminal**.
-
-Verifica que estás en la carpeta correcta:
-
-```bash
-dir
-```
-
-En macOS/Linux:
-
-```bash
-ls
-```
-
-Debes ver algo parecido a:
-
-```text
-README.md
-assets/
-scripts/
-requirements.txt
-```
-
-## Paso 5: instalar librerías para scripts
-
-Ejecuta:
-
-```bash
-pip install -r requirements.txt
-```
-
-Si tu sistema usa `python3`:
-
-```bash
-python3 -m pip install -r requirements.txt
-```
-
-Documentación oficial sobre instalación de paquetes: <https://packaging.python.org/en/latest/tutorials/installing-packages/>.
-
-## Paso 6: instalar soporte para notebooks
-
-Los notebooks están en:
+6. Para ver notebooks, entra a:
 
 ```text
 assets/notebooks/
 ```
 
-Para abrirlos en VS Code:
+GitHub permite leer notebooks, pero no ejecutarlos.
 
-1. Instala VS Code: <https://code.visualstudio.com/Download>.
-2. Instala la extensión Python: <https://marketplace.visualstudio.com/items?itemName=ms-python.python>.
-3. Instala la extensión Jupyter: <https://marketplace.visualstudio.com/items?itemName=ms-toolsai.jupyter>.
-4. Abre la carpeta del repositorio.
-5. Abre cualquier archivo `.ipynb` de `assets/notebooks/`.
+## Nivel 2: descargar el vault y abrirlo en Obsidian
 
-Para abrirlos con JupyterLab:
+### Paso 1: descargar el ZIP
 
-```bash
-pip install -r requirements-notebooks.txt
-jupyter lab
+Esta es la opción más simple.
+
+1. Abre el repositorio:
+
+   <https://github.com/ingfcetina/ia-practica-para-salud-ocupacional>
+
+2. Busca el botón verde **Code**.
+3. Haz clic en **Code**.
+4. Haz clic en **Download ZIP**.
+5. Espera a que descargue.
+6. Busca el archivo descargado. Normalmente estará en `Descargas`.
+7. Haz clic derecho sobre el ZIP.
+8. Elige **Extraer todo** o **Extract all**.
+9. Elige una ubicación fácil, por ejemplo:
+
+```text
+Documentos/ia-practica-para-salud-ocupacional
 ```
 
-Luego entra a la carpeta `assets/notebooks/` desde el navegador.
+10. Abre la carpeta extraída. Debes ver archivos como:
 
-Más detalles: [[assets/notebooks/README|Notebooks de ejemplo]] y [[06-recursos/guia-python-jupyter|Guía de Python y Jupyter Notebooks]].
+```text
+README.md
+00-empezar-aqui
+assets
+scripts
+```
 
-## Paso 7: validar los datos
+### Paso 2: instalar Obsidian
 
-Ejecuta:
+1. Abre esta página:
+
+   <https://obsidian.md/download>
+
+2. Descarga Obsidian para tu sistema operativo.
+3. Instálalo como cualquier programa normal.
+4. Abre Obsidian.
+5. Si pregunta qué hacer, elige **Open folder as vault** o **Abrir carpeta como vault**.
+6. Selecciona la carpeta que descomprimiste.
+7. Dentro de Obsidian, abre:
+
+```text
+00-empezar-aqui/mapa-del-vault.md
+```
+
+Si ves las notas con enlaces, ya está listo el vault.
+
+## Nivel 3: ejecutar ejemplos con Python
+
+Python sirve para leer los CSV, crear gráficos y generar informes. Si solo quieres leer el material, puedes saltar esta parte.
+
+## Instalar Python en Windows, sin asumir consola
+
+### Paso 1: descargar Python
+
+1. Abre:
+
+   <https://www.python.org/downloads/>
+
+2. Haz clic en el botón grande que dice **Download Python**.
+3. Espera la descarga.
+4. Abre el instalador.
+
+### Paso 2: instalar Python
+
+En la primera pantalla del instalador:
+
+1. Marca la casilla **Add python.exe to PATH** o **Add Python to PATH**.
+2. Luego haz clic en **Install Now**.
+3. Espera a que termine.
+4. Cierra el instalador.
+
+> La casilla **Add Python to PATH** es importante. Permite que Windows encuentre Python cuando ejecutes comandos.
+
+### Paso 3: abrir una ventana de comandos en la carpeta correcta
+
+No necesitas saber PowerShell de antemano. Haz esto:
+
+1. Abre la carpeta del repositorio en el Explorador de archivos.
+2. Verifica que dentro ves `README.md`, `assets` y `scripts`.
+3. Haz clic en la barra superior donde aparece la ruta de la carpeta.
+4. Escribe:
+
+```text
+cmd
+```
+
+5. Presiona **Enter**.
+
+Se abrirá una ventana negra en esa misma carpeta. Esa ventana es la consola.
+
+### Paso 4: verificar Python
+
+Copia este comando, pégalo en la ventana negra y presiona **Enter**:
+
+```bash
+python --version
+```
+
+Si funciona, verás algo parecido a:
+
+```text
+Python 3.13.2
+```
+
+Si no funciona, prueba:
+
+```bash
+py --version
+```
+
+Si `py` funciona, usa `py` en lugar de `python` para los comandos.
+
+## Instalar Python en macOS, paso a paso
+
+### Paso 1: descargar Python
+
+1. Abre:
+
+   <https://www.python.org/downloads/>
+
+2. Descarga Python para macOS.
+3. Abre el instalador `.pkg`.
+4. Sigue los pasos del instalador.
+
+### Paso 2: abrir Terminal en la carpeta
+
+1. Abre la carpeta del repositorio en Finder.
+2. Abre la aplicación **Terminal**.
+3. Escribe `cd ` con un espacio al final.
+4. Arrastra la carpeta del repositorio desde Finder hasta la ventana de Terminal.
+5. Presiona **Enter**.
+
+Eso ubica la Terminal dentro de la carpeta del proyecto.
+
+### Paso 3: verificar Python
+
+Copia y ejecuta:
+
+```bash
+python3 --version
+```
+
+Si ves una versión de Python, está listo.
+
+## Instalar Python en Linux, paso a paso
+
+En muchas distribuciones Python ya está instalado.
+
+1. Abre Terminal.
+2. Verifica:
+
+```bash
+python3 --version
+```
+
+Si no está instalado y usas Ubuntu/Debian, puedes instalarlo con:
+
+```bash
+sudo apt update
+sudo apt install python3 python3-pip
+```
+
+Si usas otra distribución, pide ayuda con este prompt:
+
+```text
+Uso Linux [nombre de distribución].
+Necesito instalar Python 3 y pip para ejecutar ejemplos educativos.
+Dame pasos seguros y simples para mi distribución.
+```
+
+## Instalar las librerías del proyecto
+
+Python solo no basta. También necesitas librerías para datos y gráficos.
+
+En la ventana de comandos o Terminal, dentro de la carpeta del proyecto, ejecuta:
+
+### Windows
+
+```bash
+python -m pip install -r requirements.txt
+```
+
+Si `python` no funcionó pero `py` sí:
+
+```bash
+py -m pip install -r requirements.txt
+```
+
+### macOS / Linux
+
+```bash
+python3 -m pip install -r requirements.txt
+```
+
+Este comando instala:
+
+- `pandas`, para trabajar con tablas;
+- `matplotlib`, para crear gráficos.
+
+## Validar que todo quedó bien
+
+Ejecuta este comando.
+
+### Windows
 
 ```bash
 python scripts/00_validar_datos.py
 ```
 
-En macOS o Linux puede ser:
+O, si usas `py`:
+
+```bash
+py scripts/00_validar_datos.py
+```
+
+### macOS / Linux
 
 ```bash
 python3 scripts/00_validar_datos.py
@@ -193,7 +275,11 @@ OK indicadores_dashboard_ejemplo.csv: 12 filas
 OK checklist_interactivo.html
 ```
 
-## Paso 8: ejecutar los scripts
+Si ves esos mensajes, la validación funcionó.
+
+## Ejecutar los ejemplos de Python
+
+### Windows
 
 ```bash
 python scripts/01_analizar_ausentismo.py
@@ -202,28 +288,121 @@ python scripts/03_limpiar_datos.py
 python scripts/04_generar_informe_base.py
 ```
 
-Los resultados se guardan en:
+Si usas `py`:
 
-- `assets/imagenes/ausentismo_por_area.png`
-- `assets/imagenes/incidentes_por_tipo.png`
-- `outputs/ausentismo_limpio.csv`
-- `outputs/informe_base.md`
-
-## Paso 9: abrir la página interactiva
-
-Abre este archivo con doble clic:
-
-```text
-assets/checklist_interactivo.html
+```bash
+py scripts/01_analizar_ausentismo.py
+py scripts/02_graficar_incidentes.py
+py scripts/03_limpiar_datos.py
+py scripts/04_generar_informe_base.py
 ```
 
-No necesita internet ni servidor. Se abre en el navegador.
+### macOS / Linux
 
-## Paso 10: actualizar el repositorio con Git
+```bash
+python3 scripts/01_analizar_ausentismo.py
+python3 scripts/02_graficar_incidentes.py
+python3 scripts/03_limpiar_datos.py
+python3 scripts/04_generar_informe_base.py
+```
 
-Si descargaste ZIP, vuelve a descargar el ZIP cuando haya una nueva versión.
+Los resultados aparecen en:
 
-Si clonaste con Git, puedes actualizar con:
+```text
+assets/imagenes/ausentismo_por_area.png
+assets/imagenes/incidentes_por_tipo.png
+outputs/ausentismo_limpio.csv
+outputs/informe_base.md
+```
+
+## Abrir notebooks sin complicarse
+
+La opción más fácil para notebooks es **VS Code**.
+
+### Instalar VS Code
+
+1. Abre:
+
+   <https://code.visualstudio.com/Download>
+
+2. Descarga e instala VS Code.
+3. Abre VS Code.
+4. Instala estas extensiones:
+   - Python: <https://marketplace.visualstudio.com/items?itemName=ms-python.python>
+   - Jupyter: <https://marketplace.visualstudio.com/items?itemName=ms-toolsai.jupyter>
+
+### Abrir la carpeta en VS Code
+
+1. En VS Code, haz clic en **File**.
+2. Haz clic en **Open Folder**.
+3. Selecciona la carpeta del repositorio.
+4. En el panel izquierdo, entra a:
+
+```text
+assets/notebooks/
+```
+
+5. Abre `01_analizar_ausentismo.ipynb`.
+6. Si VS Code pregunta por un **Kernel**, elige Python.
+7. Ejecuta las celdas con el botón ▶.
+
+## Opción avanzada: abrir notebooks con JupyterLab
+
+Solo usa esta opción si quieres aprender Jupyter directamente.
+
+Instala soporte para notebooks:
+
+### Windows
+
+```bash
+python -m pip install -r requirements-notebooks.txt
+```
+
+### macOS / Linux
+
+```bash
+python3 -m pip install -r requirements-notebooks.txt
+```
+
+Luego abre JupyterLab:
+
+### Windows
+
+```bash
+python -m jupyter lab
+```
+
+### macOS / Linux
+
+```bash
+python3 -m jupyter lab
+```
+
+Se abrirá una página en el navegador. Entra a:
+
+```text
+assets/notebooks/
+```
+
+## Abrir la página interactiva
+
+No necesitas instalar nada.
+
+1. Abre la carpeta del repositorio.
+2. Entra a `assets`.
+3. Haz doble clic en:
+
+```text
+checklist_interactivo.html
+```
+
+Se abrirá en el navegador.
+
+## Actualizar el repositorio
+
+Si descargaste ZIP, la forma más simple es volver a descargar el ZIP.
+
+Si alguien te enseñó a usar Git y clonaste el repositorio, abre la consola en la carpeta y ejecuta:
 
 ```bash
 git pull
@@ -231,15 +410,27 @@ git pull
 
 ## Si algo no funciona
 
-| Problema | Qué intentar |
+| Problema | Qué hacer |
 |---|---|
-| `python` no se reconoce | Prueba `python3 --version` o reinstala Python marcando **Add Python to PATH**. |
-| `pip` no se reconoce | Prueba `python -m pip install -r requirements.txt`. |
-| Falta `pandas` o `matplotlib` | Ejecuta de nuevo `pip install -r requirements.txt`. |
-| No abre un notebook | Instala VS Code + extensiones Python/Jupyter o instala `requirements-notebooks.txt`. |
-| El gráfico no aparece | Revisa `assets/imagenes/`; los scripts guardan imágenes ahí. |
-| El vault no abre en Obsidian | Asegúrate de abrir la carpeta completa, no un archivo suelto. |
-| `git` no se reconoce | Instala Git desde <https://git-scm.com/downloads>. |
+| No sé si estoy en la carpeta correcta | Debes ver `README.md`, `assets` y `scripts`. |
+| `python` no funciona en Windows | Prueba `py --version`. |
+| `python3` no funciona en macOS | Reinstala Python desde `python.org`. |
+| Sale `No module named pandas` | Ejecuta el comando de instalación de librerías otra vez. |
+| No encuentro el notebook | Está en `assets/notebooks/`. |
+| VS Code pide Kernel | Elige Python. Si no aparece, instala Python y reinicia VS Code. |
+| El gráfico no aparece | Revisa la carpeta `assets/imagenes/`. |
+| Tengo miedo de dañar algo | Haz una copia de la carpeta antes de modificar archivos. |
+
+## Prompt para pedir ayuda a una IA
+
+```text
+Estoy siguiendo una guía para instalar Python y abrir notebooks.
+No tengo experiencia con consola.
+Estoy en [Windows/macOS/Linux].
+Este es el paso donde estoy: [describe el paso].
+Este es el error o pantalla que veo: [pega el texto].
+Explícame qué hacer con instrucciones paso a paso, sin asumir que sé usar terminal.
+```
 
 ## Regla de privacidad
 

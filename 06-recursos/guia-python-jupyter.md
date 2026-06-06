@@ -2,243 +2,257 @@
 
 tags: #python #jupyter #notebooks #instalacion
 
-Esta guía explica qué es Jupyter Notebook, cómo abrir notebooks desde Python y cómo instalar Python en Windows, macOS y Linux.
+Esta guía explica, con lenguaje simple, qué es Python, qué es Jupyter Notebook y cómo usarlos sin asumir experiencia previa con programación o consola.
+
+## Qué es Python
+
+Python es un lenguaje para darle instrucciones al computador.
+
+En este vault lo usamos para tareas pequeñas:
+
+- leer una tabla CSV;
+- contar registros;
+- crear gráficos;
+- generar un informe base.
+
+Ejemplo:
+
+```python
+print("Hola")
+```
+
+Ese código le dice a Python que muestre la palabra `Hola`.
 
 ## Qué es Jupyter Notebook
 
-Un **Jupyter Notebook** es un archivo interactivo con extensión `.ipynb`. Combina:
+Un **Jupyter Notebook** es un archivo interactivo con extensión `.ipynb`.
 
-- texto explicativo;
+Combina:
+
+- explicación escrita;
 - código Python;
-- resultados de código;
+- resultados;
 - tablas;
-- gráficos;
-- comentarios paso a paso.
+- gráficos.
 
-Es útil para aprender porque no tienes que ejecutar todo un programa completo. Puedes ejecutar una celda, mirar el resultado, cambiar algo y volver a probar.
+Es útil para aprender porque puedes ejecutar una parte pequeña, mirar el resultado y continuar.
 
-## Diferencia entre script y notebook
+## Script o notebook: cuál usar
 
-| Formato | Archivo | Uso recomendado |
-|---|---|---|
-| Script Python | `.py` | Automatizar una tarea de principio a fin. |
-| Notebook Jupyter | `.ipynb` | Aprender, explorar datos, explicar pasos y mostrar resultados. |
-
-En este vault tienes ambos:
-
-- scripts en `scripts/`;
-- notebooks en `assets/notebooks/`.
-
-## Qué significa ejecutar una celda
-
-Un notebook está dividido en **celdas**.
-
-Hay dos tipos principales:
-
-| Tipo de celda | Qué contiene |
+| Si quieres... | Usa... |
 |---|---|
-| Markdown | Texto, títulos, listas y explicaciones. |
-| Code | Código Python que puedes ejecutar. |
+| Aprender paso a paso | Notebook `.ipynb` |
+| Ejecutar una tarea completa | Script `.py` |
+| Ver explicación y resultado juntos | Notebook |
+| Automatizar un proceso | Script |
 
-Cuando ejecutas una celda de código, Python procesa esas instrucciones y muestra el resultado debajo.
+## Qué es una celda
 
-## Instalar Python en Windows
+Un notebook tiene bloques llamados **celdas**.
 
-1. Abre <https://www.python.org/downloads/>.
-2. Descarga la versión estable recomendada.
-3. Ejecuta el instalador.
-4. Muy importante: marca **Add Python to PATH**.
-5. Presiona **Install Now**.
-6. Abre PowerShell o Terminal.
-7. Verifica:
+| Tipo de celda | Qué hace |
+|---|---|
+| Texto / Markdown | Explica el paso. |
+| Código / Code | Ejecuta Python. |
 
-```bash
-python --version
-```
+Para ejecutar una celda, normalmente presionas el botón ▶ que aparece junto a ella.
 
-Si funciona, verás algo como:
+## La forma más fácil: usar VS Code
 
-```text
-Python 3.13.2
-```
+Para principiantes, recomiendo abrir notebooks con **Visual Studio Code** porque permite ver carpetas, archivos y notebooks en una sola ventana.
 
-### Si Windows abre Microsoft Store
+### Paso 1: instalar Python
 
-A veces Windows tiene un alias que abre Microsoft Store en lugar de Python.
+Sigue la guía principal:
 
-Prueba:
+- [[00-empezar-aqui/instalacion-y-preparacion|Instalación y preparación]]
 
-```bash
-py --version
-```
+### Paso 2: instalar VS Code
 
-Si eso funciona, puedes usar:
-
-```bash
-py -m pip install -r requirements.txt
-py scripts/00_validar_datos.py
-```
-
-También puedes revisar los alias en:
-
-```text
-Configuración → Aplicaciones → Configuración avanzada de aplicaciones → Alias de ejecución de aplicaciones
-```
-
-## Instalar Python en macOS
-
-1. Abre <https://www.python.org/downloads/>.
-2. Descarga Python para macOS.
+1. Abre <https://code.visualstudio.com/Download>.
+2. Descarga VS Code para tu sistema.
 3. Instálalo.
-4. Abre Terminal.
-5. Verifica:
+4. Ábrelo.
 
-```bash
-python3 --version
+### Paso 3: instalar extensiones
+
+En VS Code:
+
+1. Busca el ícono de extensiones. Parece unos cuadritos en la barra izquierda.
+2. Busca `Python`.
+3. Instala la extensión oficial de Microsoft.
+4. Busca `Jupyter`.
+5. Instala la extensión oficial de Microsoft.
+
+Links oficiales:
+
+- Python para VS Code: <https://marketplace.visualstudio.com/items?itemName=ms-python.python>
+- Jupyter para VS Code: <https://marketplace.visualstudio.com/items?itemName=ms-toolsai.jupyter>
+
+### Paso 4: abrir la carpeta del repositorio
+
+1. En VS Code, haz clic en **File**.
+2. Haz clic en **Open Folder**.
+3. Selecciona la carpeta del repositorio.
+4. Debes ver carpetas como:
+
+```text
+00-empezar-aqui
+assets
+scripts
 ```
 
-En macOS normalmente se usa `python3`, no `python`.
+### Paso 5: abrir un notebook
 
-Para instalar librerías:
-
-```bash
-python3 -m pip install -r requirements.txt
-```
-
-Para ejecutar scripts:
-
-```bash
-python3 scripts/00_validar_datos.py
-```
-
-## Instalar Python en Linux
-
-En muchas distribuciones Python ya está instalado.
-
-Verifica:
-
-```bash
-python3 --version
-```
-
-Si no aparece, instala Python con el gestor de paquetes de tu distribución.
-
-Ejemplo en Ubuntu/Debian:
-
-```bash
-sudo apt update
-sudo apt install python3 python3-pip
-```
-
-Luego instala librerías:
-
-```bash
-python3 -m pip install -r requirements.txt
-```
-
-## Instalar Jupyter
-
-Para usar notebooks necesitas instalar dependencias adicionales.
-
-Desde la carpeta del repositorio ejecuta:
-
-```bash
-pip install -r requirements-notebooks.txt
-```
-
-En macOS/Linux puede ser:
-
-```bash
-python3 -m pip install -r requirements-notebooks.txt
-```
-
-Este archivo instala:
-
-- pandas;
-- matplotlib;
-- JupyterLab;
-- Notebook;
-- ipykernel.
-
-## Abrir notebooks desde Python con JupyterLab
-
-1. Abre una terminal en la carpeta raíz del repositorio.
-2. Instala dependencias:
-
-```bash
-pip install -r requirements-notebooks.txt
-```
-
-3. Ejecuta:
-
-```bash
-jupyter lab
-```
-
-4. Se abrirá una pestaña del navegador.
-5. En el explorador de archivos de Jupyter, entra a:
+1. En el panel izquierdo, abre:
 
 ```text
 assets/notebooks/
 ```
 
-6. Abre un notebook, por ejemplo:
+2. Haz clic en:
 
 ```text
 01_analizar_ausentismo.ipynb
 ```
 
-7. Ejecuta las celdas en orden.
+3. Si VS Code pregunta por un **Kernel**, elige Python.
+4. Ejecuta la primera celda con ▶.
+5. Sigue celda por celda.
 
-## Abrir notebooks desde VS Code
+## Instalar JupyterLab, paso a paso
 
-Esta es una opción cómoda para estudiantes.
+JupyterLab abre notebooks en el navegador. Es muy útil, pero requiere ejecutar algunos comandos.
 
-1. Instala VS Code: <https://code.visualstudio.com/Download>.
-2. Instala la extensión oficial de Python: <https://marketplace.visualstudio.com/items?itemName=ms-python.python>.
-3. Instala la extensión oficial de Jupyter: <https://marketplace.visualstudio.com/items?itemName=ms-toolsai.jupyter>.
-4. Abre VS Code.
-5. Selecciona **File → Open Folder**.
-6. Abre la carpeta del repositorio.
-7. Entra a `assets/notebooks/`.
-8. Abre un archivo `.ipynb`.
-9. Presiona **Select Kernel** si VS Code lo solicita.
-10. Elige el Python instalado.
-11. Ejecuta las celdas con el botón ▶.
+### Paso 1: abrir la consola en la carpeta correcta
 
-## Abrir notebooks en GitHub
+#### Windows
 
-GitHub permite ver notebooks directamente en el navegador, pero normalmente no permite ejecutarlos.
+1. Abre la carpeta del repositorio en el Explorador.
+2. Verifica que ves `README.md`, `assets` y `scripts`.
+3. Haz clic en la barra de dirección de la carpeta.
+4. Escribe:
+
+```text
+cmd
+```
+
+5. Presiona **Enter**.
+
+Se abrirá una ventana negra en esa carpeta.
+
+#### macOS
+
+1. Abre Terminal.
+2. Escribe `cd ` con un espacio.
+3. Arrastra la carpeta del repositorio a la Terminal.
+4. Presiona **Enter**.
+
+#### Linux
+
+1. Abre la carpeta del repositorio.
+2. Haz clic derecho.
+3. Elige **Abrir en Terminal**, si tu entorno lo permite.
+
+### Paso 2: instalar Jupyter
+
+#### Windows
+
+Copia y pega:
+
+```bash
+python -m pip install -r requirements-notebooks.txt
+```
+
+Si no funciona, prueba:
+
+```bash
+py -m pip install -r requirements-notebooks.txt
+```
+
+#### macOS / Linux
+
+Copia y pega:
+
+```bash
+python3 -m pip install -r requirements-notebooks.txt
+```
+
+### Paso 3: abrir JupyterLab
+
+#### Windows
+
+```bash
+python -m jupyter lab
+```
+
+Si usas `py`:
+
+```bash
+py -m jupyter lab
+```
+
+#### macOS / Linux
+
+```bash
+python3 -m jupyter lab
+```
+
+Se abrirá una pestaña del navegador.
+
+### Paso 4: abrir un notebook
+
+Dentro de JupyterLab:
+
+1. Busca la carpeta `assets`.
+2. Abre `notebooks`.
+3. Abre `01_analizar_ausentismo.ipynb`.
+4. Ejecuta la primera celda.
+5. Sigue en orden.
+
+## Ver notebooks en GitHub
+
+Puedes abrir notebooks desde GitHub para leerlos, pero no para ejecutarlos.
 
 Sirve para:
 
-- leer el contenido;
-- revisar el código;
-- ver la estructura del ejercicio.
+- ver el contenido;
+- leer explicaciones;
+- revisar código.
 
 No sirve para:
 
-- modificar y ejecutar celdas interactivamente;
-- generar nuevos resultados locales.
+- ejecutar celdas;
+- crear nuevos gráficos;
+- modificar resultados.
 
-Para ejecutar, usa JupyterLab o VS Code.
-
-## Orden recomendado de notebooks
+## Orden recomendado
 
 1. `assets/notebooks/01_analizar_ausentismo.ipynb`
 2. `assets/notebooks/02_graficar_incidentes.ipynb`
 3. `assets/notebooks/03_checklist_y_dashboard.ipynb`
 4. `assets/notebooks/04_generar_informe_base.ipynb`
 
-## Qué hacer si una celda falla
+## Errores frecuentes
 
-| Mensaje o problema | Posible solución |
-|---|---|
-| `ModuleNotFoundError: No module named 'pandas'` | Ejecuta `pip install -r requirements-notebooks.txt`. |
-| `jupyter: command not found` | Instala Jupyter con `pip install -r requirements-notebooks.txt`. |
-| No encuentra el CSV | Abre Jupyter desde la carpeta raíz del repositorio. |
-| VS Code pide kernel | Selecciona el Python donde instalaste las librerías. |
-| El gráfico no aparece | Ejecuta todas las celdas anteriores en orden. |
+| Lo que ves | Qué significa | Qué hacer |
+|---|---|---|
+| `No module named pandas` | Falta instalar librerías. | Ejecuta instalación de `requirements-notebooks.txt`. |
+| `jupyter no se reconoce` | Jupyter no está instalado o no está en la ruta. | Usa `python -m jupyter lab` o reinstala. |
+| No encuentra el CSV | Abriste Jupyter desde otra carpeta. | Cierra Jupyter y ábrelo desde la carpeta del repositorio. |
+| VS Code pide Kernel | Necesita saber qué Python usar. | Elige Python en la lista. |
+| No aparece Python como Kernel | VS Code no detecta Python. | Reinicia VS Code después de instalar Python. |
+
+## Prompt para pedir ayuda
+
+```text
+Estoy intentando abrir un notebook Jupyter de este repositorio.
+No tengo experiencia con programación.
+Uso [Windows/macOS/Linux].
+Estoy usando [VS Code/JupyterLab/GitHub].
+Esto es lo que veo: [pega error o describe pantalla].
+Dame pasos muy concretos para resolverlo.
+```
 
 ## Regla de privacidad
 

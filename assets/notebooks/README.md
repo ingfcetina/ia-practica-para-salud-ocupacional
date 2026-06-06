@@ -1,18 +1,15 @@
 # Notebooks de ejemplo
 
-Estos notebooks permiten recorrer los ejemplos paso a paso con celdas de explicación y código comentado.
+Estos notebooks permiten aprender paso a paso con texto, código y resultados en el mismo archivo.
 
 ## Qué es un notebook
 
-Un notebook de Jupyter es un archivo `.ipynb` que combina:
+Un notebook de Jupyter es un archivo `.ipynb`. Tiene dos tipos de partes:
 
-- texto explicativo;
-- código Python;
-- resultados;
-- tablas;
-- gráficos.
+- explicaciones escritas;
+- celdas de código que puedes ejecutar con un botón ▶.
 
-Es ideal para aprender porque puedes ejecutar una celda a la vez y ver qué pasa.
+Es como una guía práctica donde puedes leer y probar al mismo tiempo.
 
 Para una explicación más completa, revisa [[06-recursos/guia-python-jupyter|Guía de Python y Jupyter Notebooks]].
 
@@ -25,57 +22,80 @@ Para una explicación más completa, revisa [[06-recursos/guia-python-jupyter|Gu
 | `03_checklist_y_dashboard.ipynb` | Calcular cumplimiento y graficar indicadores. | `assets/datos/checklist_inspeccion_ejemplo.csv`, `assets/datos/indicadores_dashboard_ejemplo.csv` |
 | `04_generar_informe_base.ipynb` | Crear un borrador de informe con indicadores agregados. | `assets/datos/ausentismo_ejemplo.csv`, `assets/datos/incidentes_ejemplo.csv` |
 
-## Cómo abrirlos desde Python con JupyterLab
+## Opción recomendada para principiantes: VS Code
 
-1. Abre una terminal en la carpeta raíz del repositorio.
-2. Instala dependencias:
+1. Instala Python siguiendo [[00-empezar-aqui/instalacion-y-preparacion|Instalación y preparación]].
+2. Instala VS Code: <https://code.visualstudio.com/Download>.
+3. Abre VS Code.
+4. Instala la extensión **Python**.
+5. Instala la extensión **Jupyter**.
+6. En VS Code, elige **File → Open Folder**.
+7. Abre la carpeta completa del repositorio.
+8. En el panel izquierdo, abre `assets/notebooks/`.
+9. Haz clic en `01_analizar_ausentismo.ipynb`.
+10. Si pide un **Kernel**, elige Python.
+11. Ejecuta cada celda con el botón ▶.
+
+## Opción con JupyterLab
+
+Usa esta opción si quieres abrir notebooks en el navegador.
+
+1. Abre una consola en la carpeta del repositorio.
+2. Instala Jupyter:
+
+### Windows
 
 ```bash
-pip install -r requirements-notebooks.txt
+python -m pip install -r requirements-notebooks.txt
 ```
 
-3. Ejecuta:
+Si `python` no funciona:
 
 ```bash
-jupyter lab
+py -m pip install -r requirements-notebooks.txt
 ```
 
-4. Se abrirá Jupyter en el navegador.
-5. Entra a:
-
-```text
-assets/notebooks/
-```
-
-6. Abre un notebook.
-7. Ejecuta las celdas en orden con el botón ▶.
-
-En macOS o Linux puede que necesites usar:
+### macOS / Linux
 
 ```bash
 python3 -m pip install -r requirements-notebooks.txt
+```
+
+3. Abre JupyterLab:
+
+### Windows
+
+```bash
+python -m jupyter lab
+```
+
+### macOS / Linux
+
+```bash
 python3 -m jupyter lab
 ```
 
-## Cómo abrirlos en Visual Studio Code
-
-1. Instala VS Code: <https://code.visualstudio.com/Download>.
-2. Instala la extensión oficial de Python: <https://marketplace.visualstudio.com/items?itemName=ms-python.python>.
-3. Instala la extensión oficial de Jupyter: <https://marketplace.visualstudio.com/items?itemName=ms-toolsai.jupyter>.
-4. Abre la carpeta completa del repositorio en VS Code.
-5. Abre un archivo `.ipynb` de `assets/notebooks/`.
-6. Si VS Code lo pide, selecciona el kernel de Python.
-7. Ejecuta las celdas en orden.
+4. En el navegador, entra a `assets/notebooks/`.
+5. Abre un notebook.
+6. Ejecuta celdas en orden.
 
 ## Cómo verlos en GitHub
 
-GitHub permite abrir los `.ipynb` para leerlos, pero no ejecutarlos. Para ejecutar celdas necesitas JupyterLab o VS Code.
+GitHub permite abrir los `.ipynb` para leerlos, pero no ejecutarlos. Para ejecutar celdas necesitas VS Code o JupyterLab.
 
 ## Importante
 
-- Ejecuta los notebooks desde la carpeta raíz del repositorio para que las rutas funcionen.
+- Abre siempre la carpeta completa del repositorio, no solo el notebook suelto.
+- Ejecuta las celdas en orden.
 - No uses datos reales identificables.
-- Si una celda falla, lee el mensaje de error y revisa [[00-empezar-aqui/instalacion-y-preparacion|Instalación y preparación]].
+- Si una celda falla, copia el error y pide ayuda con este prompt:
+
+```text
+Estoy ejecutando un notebook de Python.
+No tengo experiencia programando.
+Este es el error: [pega el error].
+Explícame qué significa y qué paso debo revisar.
+```
 
 ## Relacionado
 
