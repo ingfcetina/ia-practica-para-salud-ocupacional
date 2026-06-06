@@ -18,6 +18,29 @@ Otras opciones:
 - `vault-ia-salud-ocupacional`
 - `salud-ocupacional-ia-python`
 
+## Link público para compartir
+
+Repositorio principal:
+
+```text
+https://github.com/ingfcetina/ia-practica-para-salud-ocupacional
+```
+
+Ruta recomendada para estudiantes:
+
+```text
+https://github.com/ingfcetina/ia-practica-para-salud-ocupacional/blob/main/00-empezar-aqui/ruta-de-aprendizaje.md
+```
+
+Mensaje corto para docentes:
+
+```text
+Para empezar, entra al repositorio y abre la ruta de aprendizaje:
+https://github.com/ingfcetina/ia-practica-para-salud-ocupacional/blob/main/00-empezar-aqui/ruta-de-aprendizaje.md
+
+Sigue las notas en orden. Primero revisa privacidad y uso seguro de datos; luego instalación, conceptos, prácticas guiadas y Python desde cero. No uses datos reales identificables.
+```
+
 ## Antes de publicar
 
 - [ ] Revisar [[README|README]].

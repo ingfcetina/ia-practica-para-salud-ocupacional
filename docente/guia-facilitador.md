@@ -46,6 +46,33 @@ Si Python falla durante la sesión, no detengas el taller: muestra el código, l
 
 Empieza desde [[00-empezar-aqui/mapa-del-vault|Mapa del vault]].
 
+## Texto listo para compartir con estudiantes
+
+Puedes copiar y pegar este mensaje en correo, WhatsApp, Teams, Moodle, Classroom o el medio que uses con el grupo:
+
+```text
+Hola. Para el taller usaremos este repositorio público:
+
+https://github.com/ingfcetina/ia-practica-para-salud-ocupacional
+
+Es un vault educativo para aprender programación con inteligencia artificial aplicada a salud ocupacional. No necesitas experiencia previa en programación.
+
+¿Por dónde empezar?
+1. Entra al enlace del repositorio.
+2. Abre la nota README.md para entender qué contiene el material.
+3. Luego abre esta ruta de aprendizaje:
+   00-empezar-aqui/ruta-de-aprendizaje.md
+4. Sigue los pasos en orden: privacidad, instalación, conceptos, prácticas guiadas y Python desde cero.
+
+Importante: no uses datos reales de pacientes, trabajadores, empresas o instituciones. El material trabaja con datos sintéticos de ejemplo.
+```
+
+Link directo para empezar:
+
+```text
+https://github.com/ingfcetina/ia-practica-para-salud-ocupacional/blob/main/00-empezar-aqui/ruta-de-aprendizaje.md
+```
+
 Archivos clave:
 
 - [[docente/guion-taller-una-hora|Guion del taller de una hora]]
