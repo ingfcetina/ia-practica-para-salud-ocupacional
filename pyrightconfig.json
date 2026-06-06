@@ -1,0 +1,11 @@
+{
+  "venvPath": ".",
+  "venv": ".venv",
+  "include": ["scripts"],
+  "exclude": [".venv", ".atl", ".pi", ".obsidian"],
+  "typeCheckingMode": "basic",
+  "reportMissingImports": false,
+  "reportAttributeAccessIssue": false,
+  "reportCallIssue": false,
+  "reportArgumentType": false
+}

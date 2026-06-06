@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Checklist interactivo de seguridad ocupacional</title>
+    <style>
+      body {
+        font-family: system-ui, Arial, sans-serif;
+        margin: 0;
+        background: #f4f7fb;
+        color: #1f2937;
+      }
+      main {
+        max-width: 860px;
+        margin: 32px auto;
+        padding: 24px;
+        background: white;
+        border-radius: 18px;
+        box-shadow: 0 10px 30px rgba(15, 23, 42, 0.1);
+      }
+      h1 {
+        color: #155e75;
+        margin-top: 0;
+      }
+      .alerta {
+        background: #fff7ed;
+        border-left: 5px solid #f97316;
+        padding: 12px 16px;
+        border-radius: 10px;
+      }
+      .pregunta {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        gap: 12px;
+        align-items: center;
+        padding: 14px 0;
+        border-bottom: 1px solid #e5e7eb;
+      }
+      select {
+        padding: 8px;
+        border-radius: 8px;
+        border: 1px solid #cbd5e1;
+      }
+      button {
+        margin-top: 18px;
+        padding: 12px 16px;
+        border: 0;
+        border-radius: 10px;
+        background: #155e75;
+        color: white;
+        font-weight: 700;
+        cursor: pointer;
+      }
+      #resultado {
+        margin-top: 18px;
+        padding: 16px;
+        border-radius: 12px;
+        font-size: 1.05rem;
+      }
+      .verde {
+        background: #dcfce7;
+      }
+      .amarillo {
+        background: #fef9c3;
+      }
+      .rojo {
+        background: #fee2e2;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>Checklist interactivo de seguridad ocupacional</h1>
+      <p>
+        Ejemplo didáctico para una capacitación. Usa preguntas generales y no
+        recopila datos personales.
+      </p>
+      <div class="alerta">
+        <strong>Privacidad:</strong> no escribas nombres de personas, historias
+        clínicas ni datos identificables en este archivo de práctica.
+      </div>
+      <section id="lista"></section>
+      <button onclick="calcular()">Calcular cumplimiento</button>
+      <div id="resultado" aria-live="polite"></div>
+    </main>
+    <script>
+      const preguntas = [
+        "El área de trabajo está libre de obstáculos visibles",
+        "Los elementos de protección personal requeridos están disponibles",
+        "Las rutas de evacuación están señalizadas y despejadas",
+        "Los residuos se encuentran separados según el protocolo",
+        "El personal conoce a quién reportar un incidente o condición insegura",
+      ];
+      const lista = document.getElementById("lista");
+      preguntas.forEach((texto, indice) => {
+        const fila = document.createElement("div");
+        fila.className = "pregunta";
+        fila.innerHTML = `<label for="p${indice}">${texto}</label><select id="p${indice}"><option value="">Sin responder</option><option value="1">Sí</option><option value="0">No</option></select>`;
+        lista.appendChild(fila);
+      });
+      function calcular() {
+        const valores = preguntas.map(
+          (_, indice) => document.getElementById(`p${indice}`).value,
+        );
+        const respondidas = valores.filter((v) => v !== "").length;
+        const si = valores.filter((v) => v === "1").length;
+        const porcentaje =
+          respondidas === 0 ? 0 : Math.round((si / respondidas) * 100);
+        const resultado = document.getElementById("resultado");
+        let clase = "rojo";
+        let recomendacion =
+          "Priorizar revisión inmediata y conversar con el equipo sobre barreras.";
+        if (porcentaje >= 80) {
+          clase = "verde";
+          recomendacion = "Mantener seguimiento y documentar buenas prácticas.";
+        } else if (porcentaje >= 50) {
+          clase = "amarillo";
+          recomendacion =
+            "Identificar acciones de mejora y responsables de seguimiento.";
+        }
+        resultado.className = clase;
+        resultado.innerHTML = `<strong>Cumplimiento:</strong> ${porcentaje}% (${si} respuestas positivas de ${respondidas} respondidas).<br>${recomendacion}`;
+      }
+    </script>
+  </body>
+</html>

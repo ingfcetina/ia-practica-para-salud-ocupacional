@@ -1,0 +1,13 @@
+mes,indicador,valor,unidad
+2026-01,dias_ausencia,55,dias
+2026-02,dias_ausencia,67,dias
+2026-03,dias_ausencia,69,dias
+2026-04,dias_ausencia,62,dias
+2026-01,incidentes_reportados,3,eventos
+2026-02,incidentes_reportados,3,eventos
+2026-03,incidentes_reportados,3,eventos
+2026-04,incidentes_reportados,3,eventos
+2026-01,cumplimiento_checklist,78,porcentaje
+2026-02,cumplimiento_checklist,82,porcentaje
+2026-03,cumplimiento_checklist,76,porcentaje
+2026-04,cumplimiento_checklist,85,porcentaje

@@ -1,0 +1,13 @@
+fecha,area,descripcion,tipo_incidente,severidad,accion_inicial
+2026-01-05,Laboratorio,Salpicadura menor durante preparacion de solucion,exposicion_quimica,leve,Lavado inmediato y reporte
+2026-01-11,Enfermeria,Tropiezo sin lesion en pasillo humedo,caida_mismo_nivel,leve,Senalizar y secar superficie
+2026-01-18,Urgencias,Sobreesfuerzo al movilizar camilla,sobreesfuerzo,moderada,Revisar tecnica y apoyo mecanico
+2026-02-02,Administracion,Dolor lumbar luego de jornada prolongada,ergonomia,leve,Ajustar silla y pausas activas
+2026-02-14,Laboratorio,Corte superficial con material de vidrio,corte_puncion,leve,Atencion basica y disposicion segura
+2026-02-20,Urgencias,Golpe en mano durante traslado de equipo,golpe_atrapamiento,leve,Revisar ruta de traslado
+2026-03-03,Enfermeria,Contacto con fluido durante procedimiento,riesgo_biologico,moderada,Aplicar protocolo de exposicion
+2026-03-16,Administracion,Caida de caja desde estante,golpe_atrapamiento,leve,Reorganizar almacenamiento
+2026-03-22,Servicios_generales,Irritacion ocular al usar producto de limpieza,exposicion_quimica,moderada,Revisar EPP y ventilacion
+2026-04-04,Enfermeria,Puncion menor durante descarte de material,corte_puncion,moderada,Reforzar descarte seguro
+2026-04-12,Urgencias,Resbalon sin caida por piso mojado,caida_mismo_nivel,leve,Mejorar senalizacion temporal
+2026-04-21,Servicios_generales,Sobreesfuerzo al levantar bolsa pesada,sobreesfuerzo,moderada,Revisar pesos y ayudas
