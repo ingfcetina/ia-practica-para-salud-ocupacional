@@ -2,66 +2,134 @@
 
 tags: #python #csv #principiantes
 
-Un CSV es una tabla guardada como texto. Es parecido a una hoja de cálculo, pero se guarda en un formato simple que Python puede leer fácilmente.
+En esta nota vas a aprender a abrir una tabla CSV y a leerla con Python. Un CSV es parecido a una hoja de cálculo, pero guardada como texto simple.
 
-En este vault vas a empezar con datos sintéticos ubicados en:
+No necesitas entender todo el código al inicio. La idea es reconocer este flujo:
 
 ```text
-assets/datos/
+archivo CSV → Python lo lee → Python muestra filas y columnas → tú revisas si tiene sentido
 ```
 
-## Qué aprenderás
+## Objetivo de aprendizaje
 
-Al terminar esta nota podrás:
+Al terminar podrás:
 
-- ubicar un archivo CSV dentro del proyecto;
-- leerlo con Python;
-- ver sus primeras filas;
-- revisar nombres de columnas;
-- entender qué hacer si la ruta falla.
+- ubicar un archivo CSV dentro del vault;
+- abrirlo sin programar;
+- validar que los datos del proyecto existen;
+- leer un CSV con Python;
+- ver las primeras filas y los nombres de columnas;
+- pedir ayuda a la IA cuando una ruta falla.
+
+## Tiempo sugerido
+
+| Actividad | Tiempo |
+|---|---:|
+| Abrir el CSV sin programar | 5 min |
+| Validar archivos | 5 min |
+| Leer código explicado | 10 min |
+| Probar o adaptar ruta | 10 min |
 
 ## Antes de empezar
 
-1. Abre una consola o Terminal en la carpeta raíz del repositorio siguiendo [[00-empezar-aqui/instalacion-y-preparacion|Instalación y preparación]].
-2. Verifica que ves estas carpetas:
+Revisa:
+
+- [[00-empezar-aqui/instalacion-y-preparacion|Instalación y preparación]]
+- [[00-empezar-aqui/reglas-de-privacidad|Reglas de privacidad]]
+- [[06-recursos/datasets-ejemplo|Datasets de ejemplo]]
+
+Abre una consola o Terminal en la carpeta raíz del repositorio. Debes estar en la carpeta donde ves:
 
 ```text
+README.md
 assets/
 scripts/
 03-python-desde-cero/
 ```
 
-3. Instala dependencias si todavía no lo hiciste:
+Si no ves esas carpetas, todavía no estás en el lugar correcto.
 
-En Windows:
+## Archivo de datos
+
+Usa:
+
+```text
+assets/datos/ausentismo_ejemplo.csv
+```
+
+Este archivo es sintético. No contiene personas reales.
+
+## Qué contiene el dataset
+
+| Columna | Qué significa |
+|---|---|
+| `mes` | Mes del registro. |
+| `area` | Área o servicio. |
+| `dias_ausencia` | Total agregado de días de ausencia. |
+| `eventos_ausencia` | Cantidad agregada de eventos. |
+| `motivo_agregado` | Motivo agrupado, no diagnóstico individual. |
+| `turno` | Turno asociado al registro agregado. |
+
+## Pregunta profesional
+
+> ¿Qué información trae esta tabla y qué columnas podrían servir para un análisis de ausentismo?
+
+Antes de calcular, primero hay que entender la tabla.
+
+## Paso 1: abrir el CSV sin programar
+
+1. Abre la carpeta del repositorio.
+2. Entra a `assets/datos/`.
+3. Abre `ausentismo_ejemplo.csv`.
+4. Puedes usar Excel, Numbers, Google Sheets o un editor de texto.
+5. Mira los nombres de columnas.
+6. Revisa si entiendes qué representa cada fila.
+
+Pregunta para pensar:
+
+```text
+¿Esta tabla contiene nombres, documentos o diagnósticos individuales?
+```
+
+Respuesta esperada: no.
+
+## Paso 2: instalar dependencias si hace falta
+
+Si todavía no instalaste librerías, ejecuta esto desde la carpeta del repositorio.
+
+### Windows
 
 ```bash
 python -m pip install -r requirements.txt
 ```
 
-Si `python` no funciona, prueba:
+Si `python` no funciona:
 
 ```bash
 py -m pip install -r requirements.txt
 ```
 
-En macOS:
+### macOS
 
 ```bash
 python3 -m pip install -r requirements.txt
 ```
 
-Guía completa: [[00-empezar-aqui/instalacion-y-preparacion|Instalación y preparación]].
+## Paso 3: validar que los datos existen
 
-## Paso 1: validar que los datos existen
-
-Ejecuta:
+### Windows
 
 ```bash
 python scripts/00_validar_datos.py
 ```
 
-Si usas macOS:
+Si usas `py`:
+
+```bash
+py scripts/00_validar_datos.py
+```
+
+### macOS
 
 ```bash
 python3 scripts/00_validar_datos.py
@@ -83,9 +151,9 @@ Si esto falla, no sigas todavía. Revisa:
 - que exista `assets/datos/`;
 - que no hayas movido los archivos CSV.
 
-## Paso 2: leer un CSV con Python
+## Paso 4: leer un CSV con Python
 
-Copia este código en un archivo nuevo o pruébalo en un notebook:
+Puedes probar este código en un notebook o pedir a Claude Code/Codex que lo ejecute en un archivo temporal. Si estás empezando, primero léelo sin modificarlo.
 
 ```python
 # Importamos pandas, una librería para trabajar con tablas.
@@ -104,7 +172,19 @@ print(datos.head())
 print(datos.columns)
 ```
 
-## Qué significa cada parte
+## Qué deberías observar
+
+`datos.head()` muestra las primeras filas de la tabla.
+
+`datos.columns` muestra algo parecido a:
+
+```text
+Index(['mes', 'area', 'dias_ausencia', 'eventos_ausencia', 'motivo_agregado', 'turno'], dtype='object')
+```
+
+No importa si el formato se ve un poco distinto. Lo importante es reconocer los nombres de columnas.
+
+## Código explicado
 
 | Código | Explicación |
 |---|---|
@@ -115,9 +195,9 @@ print(datos.columns)
 | `datos.head()` | Muestra las primeras filas. |
 | `datos.columns` | Muestra los nombres de columnas. |
 
-## Paso 3: cambiar el archivo que quieres leer
+## Paso 5: cambiar el archivo que quieres leer
 
-Para leer otro CSV, cambia la ruta.
+Para leer otro CSV, cambia solo la ruta.
 
 Ejemplo con incidentes:
 
@@ -135,9 +215,9 @@ datos = pd.read_csv(ruta)
 print(datos.head())
 ```
 
-## Cómo pedirle a la IA que te ayude
+## Cómo pedirle ayuda a la IA
 
-Prompt recomendado:
+Prompt para entender el código:
 
 ```text
 Estoy aprendiendo Python desde cero.
@@ -155,13 +235,40 @@ Indícame exactamente qué línea debo reemplazar y por qué.
 No cambies el resto del código si no es necesario.
 ```
 
+Prompt si aparece error:
+
+```text
+Estoy empezando con Python.
+Este código me dio este error: [pega el error].
+Explícame qué significa en lenguaje simple.
+Dime qué debo revisar primero: carpeta, ruta, instalación o nombre de columna.
+```
+
+## Qué NO hacer
+
+- No pegues datos reales identificables en una IA pública.
+- No cambies varias líneas a la vez si estás aprendiendo.
+- No borres archivos originales para “probar”.
+- No interpretes resultados antes de entender qué columnas tienes.
+
 ## Errores comunes
 
 | Error | Qué significa | Cómo resolverlo |
 |---|---|---|
-| `FileNotFoundError` | Python no encuentra el archivo. | Revisa la ruta y que estés en la carpeta raíz del repo. |
-| `ModuleNotFoundError: pandas` | No está instalada la librería pandas. | Vuelve a la sección "Antes de empezar" e instala dependencias con el comando de Windows o macOS. |
+| `FileNotFoundError` | Python no encuentra el archivo. | Revisa la ruta y que estés en la carpeta raíz del repositorio. |
+| `ModuleNotFoundError: pandas` | No está instalada la librería pandas. | Instala dependencias con el comando de Windows o macOS. |
 | Columnas raras o vacías | El archivo puede tener otro separador o codificación. | Revisa el CSV o pide ayuda a la IA con el mensaje de error. |
+| No sabes dónde está la consola | Falta abrir la carpeta correcta. | Vuelve a [[00-empezar-aqui/instalacion-y-preparacion|Instalación y preparación]]. |
+
+## Producto final
+
+Al terminar deberías tener:
+
+- el CSV abierto sin programar;
+- validación de datos ejecutada;
+- nombres de columnas identificados;
+- una explicación básica de `read_csv`, `head` y `columns`;
+- un prompt listo para pedir ayuda si falla la ruta.
 
 ## Relacionado
 
