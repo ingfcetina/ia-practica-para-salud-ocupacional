@@ -6,14 +6,11 @@ No necesitas experiencia previa en programación. La idea es aprender a usar her
 
 ## Si eres estudiante
 
-Empieza por esta ruta:
+Empieza por la ruta canónica del vault:
 
-1. [[00-empezar-aqui/bienvenida-estudiantes|Bienvenida para estudiantes]]
-2. [[00-empezar-aqui/ruta-de-aprendizaje|Ruta de aprendizaje]]
-3. [[00-empezar-aqui/reglas-de-privacidad|Reglas de privacidad]]
-4. [[00-empezar-aqui/instalacion-y-preparacion|Instalación y preparación]]
-5. [[02-practicas-guiadas/practica-01-analizar-ausentismo|Práctica 1: analizar ausentismo]]
-6. [[05-mini-proyectos/checklist-inteligente|Mini proyecto: checklist inteligente]]
+- [[00-empezar-aqui/ruta-de-aprendizaje|Ruta de aprendizaje]]
+
+Esa nota contiene el orden recomendado para avanzar sin mezclar instalación, conceptos, prácticas y recursos.
 
 ## Si eres docente o facilitador
 

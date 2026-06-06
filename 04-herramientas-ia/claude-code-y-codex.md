@@ -2,7 +2,9 @@
 
 tags: #claude-code #codex #ia #programacion #herramientas
 
-Esta guía explica cómo usar asistentes de programación como **Claude Code** y **Codex** para trabajar con este vault: leer notas, revisar datos, ejecutar scripts, crear notebooks y mejorar ejemplos.
+Esta es una guía operativa para usar **Claude Code** y **Codex** con este vault: instalación, comandos, prompts y validaciones.
+
+Si primero necesitas entender qué son y cuándo conviene usarlos, revisa [[04-herramientas-ia/asistentes-de-codigo|Asistentes de código]].
 
 > Regla principal: usa estos asistentes con datos sintéticos. No pegues ni subas datos reales identificables de pacientes, trabajadores, empresas o instituciones.
 
